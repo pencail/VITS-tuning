@@ -4,7 +4,7 @@ English Documentation Please Click [here](./MD/LOCAL_EN.md)
 0. 确保已安装 `Python==3.10`, CMake & C/C++ 编译器, ffmpeg; 
 1. 克隆此仓库;
 2. 执行 `pip install -r requirements.txt`;
-3. 安装相应GPU版本的PyTorch:(python虚拟机会建立相应的cuda版本)
+3. 安装相应GPU版本的PyTorch:(python虚拟机会建立相应的cuda版本)具体可参考[PyTorch官方](https://pytorch.org/get-started/previous-versions/)给出的版本对应关系
     ```
    # CUDA 11.6
     pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
