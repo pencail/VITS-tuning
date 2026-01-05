@@ -1,2 +1,11 @@
 /models/*
 /configs/*
+.venv
+/video_data
+/raw_audio
+/denoised_audio
+/custom_character_voice
+/segmented_character_voice
+/monotonic_align/core.c
+/monotonic_align/monotonic_align/*
+/monotonic_align/build/*
