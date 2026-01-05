@@ -53,19 +53,19 @@ English Documentation Please Click [here](./MD/LOCAL_EN.md)
     ```
    wget https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/D_trilingual.pth -O ./pretrained_models/D_0.pth
    wget https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/G_trilingual.pth -O ./pretrained_models/G_0.pth
-   wget https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/configs/uma_trilingual.json -O ./configs/finetune_speaker.json
+   wget https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/configs/uma_trilingual.json -O ./pretrained_configs/finetune_speaker.json
    ```
    要下载 `CJ` 模型，请执行以下命令:
    ```
    wget https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth -O ./pretrained_models/D_0.pth
    wget https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth -O ./pretrained_models/G_0.pth
-   wget https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/config.json -O ./configs/finetune_speaker.json
+   wget https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/config.json -O ./pretrained_configs/finetune_speaker.json
    ```
     要下载 `C` 模型，请执行以下命令:
    ```
    wget https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/D_0.pth -O ./pretrained_models/D_0.pth
    wget https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/G_0.pth -O ./pretrained_models/G_0.pth
-   wget https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/config.json -O ./configs/finetune_speaker.json
+   wget https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/config.json -O ./pretrained_configs/finetune_speaker.json
    ```
     ### Windows
     从上面描述的三个选项中选择一个，使用URL手动下载`G_0.pth`, `D_0.pth`, `finetune_speaker.json` .
@@ -124,3 +124,4 @@ English Documentation Please Click [here](./MD/LOCAL_EN.md)
 ### 所有音频应调整为单音频
 1.使用CUDA 12.X版本需将 training/finetune_speaker.py 第69行中的`init_method='env://'`改为`init_method='env://?use_libuv=False'`
 2.windwos可能需要安装visual studio 2019或者2022并配置cmake
+3.目前 torch2.8版本会报RuntimeError: makeDeviceForHostname(): unsupported gloo device错误，疑似PyTorch官方导致https://github.com/pytorch/pytorch/issues/150381，等待官方修复，应该会在2.10版本更新修复
