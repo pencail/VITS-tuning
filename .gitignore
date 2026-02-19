@@ -8,6 +8,10 @@
 /monotonic_align/core.c
 /monotonic_align/monotonic_align/*
 /monotonic_align/build/*
+/monotonic_align/__pycache__/*
+/text/__pycache__/*
+/training/__pycache__/*
+__pycache__/*
 .venv
 
 /video_data
